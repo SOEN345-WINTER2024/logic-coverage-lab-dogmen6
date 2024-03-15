@@ -8,7 +8,7 @@ CheckItTest.java: contains all tests for Predicate Coverage, Clause Coverage, CA
 
 ## Definitions:
 
-**Predicate Coverage:** Test cases cover at least one true condition, one false condition, and one mixed condition.
+**Predicate Coverage:** Test cases cover at least one true condition and one false condition
 
 **Clause Coverage:** There are tests for all true conditions for each individual clause and one test for all false conditions.
 
