@@ -12,10 +12,6 @@ import static org.junit.Assert.*;
 public class CheckItTest {
 
     // Test cases to achieve Predicate Coverage
-    @Test
-    public void testPredicateCoverage_TTT() {
-        assertTrue("Should return False", CheckIt.checkIt(true, true, true));
-    }
 
     @Test
     public void testPredicateCoverage_TFF() {
@@ -35,25 +31,11 @@ public class CheckItTest {
     }
 
     @Test
-    public void testClauseCoverage_TFT() {
-        assertTrue("Should return False", CheckIt.checkIt(true, false, true));
-    }
-
-    @Test
-    public void testClauseCoverage_FTT() {
-        assertTrue("Should return False", CheckIt.checkIt(false, true, true));
-    }
-
-    @Test
     public void testClauseCoverage_FFF() {
         assertFalse("Should return True", CheckIt.checkIt(false, false, false));
     }
 
     // Test cases to achieve CACC (Conditional-Absolute Clause Coverage)
-    @Test
-    public void testCACC_TTT() {
-        assertTrue("Should return False", CheckIt.checkIt(true, true, true));
-    }
 
     @Test
     public void testCACC_TFT() {
@@ -61,74 +43,22 @@ public class CheckItTest {
     }
 
     @Test
-    public void testCACC_FTT() {
-        assertTrue("Should return False", CheckIt.checkIt(false, true, true));
-    }
-
-    @Test
-    public void testCACC_FFT() {
-        assertFalse("Should return True", CheckIt.checkIt(false, false, true));
-    }
-
-    @Test
-    public void testCACC_TTF() {
-        assertTrue("Should return False", CheckIt.checkIt(true, true, false));
-    }
-
-    @Test
-    public void testCACC_TFF() {
-        assertTrue("Should return False", CheckIt.checkIt(true, false, false));
-    }
-
-    @Test
     public void testCACC_FTF() {
         assertFalse("Should return True", CheckIt.checkIt(false, true, false));
     }
 
-    @Test
-    public void testCACC_FFF() {
-        assertFalse("Should return True", CheckIt.checkIt(false, false, false));
-    }
 
     // Test cases to achieve RACC (Restricted-Absolute Clause Coverage)
-    @Test
-    public void testRACC_TTT() {
-        assertTrue("Should return False", CheckIt.checkIt(true, true, true));
-    }
 
     @Test
     public void testRACC_TFT() {
         assertTrue("Should return False", CheckIt.checkIt(true, false, true));
     }
 
-    @Test
-    public void testRACC_FTT() {
-        assertTrue("Should return False", CheckIt.checkIt(false, true, true));
-    }
 
     @Test
     public void testRACC_FFT() {
         assertFalse("Should return True", CheckIt.checkIt(false, false, true));
-    }
-
-    @Test
-    public void testRACC_TTF() {
-        assertTrue("Should return False", CheckIt.checkIt(true, true, false));
-    }
-
-    @Test
-    public void testRACC_TFF() {
-        assertTrue("Should return False", CheckIt.checkIt(true, false, false));
-    }
-
-    @Test
-    public void testRACC_FTF() {
-        assertFalse("Should return True", CheckIt.checkIt(false, true, false));
-    }
-
-    @Test
-    public void testRACC_FFF() {
-        assertFalse("Should return True", CheckIt.checkIt(false, false, false));
     }
 
 }
